@@ -1,0 +1,343 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+.clearfix:after{content: "";display: block; clear: both;}
+.form-group{margin:0;}
+/*SearchBox*/
+
+#search_box .search-container form{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+#search_box .search-container .input-group-btn{
+	width:80px;
+}
+
+#search_box .search-container form>div.site_box,#search_box .search-container form>div.search_box{
+	display:flex;
+	 align-items:center;
+ }
+#search_box .search-container form>div.site_box div{
+	display:flex;
+	 align-items:center;	
+}
+ #search_box .search_input input{
+ width:500px !important;
+ height:35px !important;
+ margin:0;
+ }
+ 
+  #search_box .search_box{margin-left:20px;}
+ 
+  #search_box .form_group{
+  	display:flex;
+  	align-items:center;
+  }
+  #search_box .search_box{margin-left:20px;}
+  
+  #search_box label{padding:0 20px; margin:0;}
+.list_name{font-size:16px; font-weight:500;}
+  #list-user .member_box{}
+   #list-user{width:60% !important;}
+  #list-user-sub{width:35% !important;}
+  #list-user .textAR, #list-user2 .textAR{margin-top:10px; display:flex; flex-direction:Row; justify-content:flex-end; align-items:center;}
+  #list-user .msg_box{height:fit-content;}
+  .msg_contents{display:flex; flex-direction:row; justify-content:space-between; padding-bottom:10px;}
+  #list-user{width:60%;}
+  
+  .detail-info-form .form-group{display:flex; align-items:center; margin:0; margin:10px 0; height:30px;}
+    .detail-info-form .form-group input{height:100% !important; width:80%;}
+    .detail-info-form .form-group label{width:20%; text-align:right; box-sizing:border-box; padding-right:10px; margin:0; font-size:13px;}
+    .checkbox-group{width:100%; display:flex; align-items:center;}
+    .checkbox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center;}
+    .checkbox-group input{margin:0 !important; margin-right:4px !important;}
+    .radiobox-group{width:40%; display:flex; align-items:center; box-sizing:border-box; padding:20px 10px;}
+   .radiobox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center;}
+    .radiobox-group input{margin:0 !important; margin-right:4px !important;}
+ 	#list-user2{width:100%;}
+ 	.user_pay_wrap{display:flex; justify-content:flex-start;}
+ 	.user_pay_box{height:fit-content;}
+    .user_pay_list{width:60%;}
+    .detail_box{width:35%; margin-left:30px;}
+    /*t ab*/
+    .form-group .form-control{
+    	margin:0;
+    	padding:0;
+    	box-sizing:border-box;
+    	padding:0px 2.5px;
+    }
+    .tabmenuWrap{
+	    display:flex;
+	    justify-content:space-between;
+	    align-items:flex-end;
+    }
+    .tab-menu{
+    	display:flex;
+    	align-items:center;
+    	margin:0;
+    }
+    
+	    .tabContents li {
+		display: none;
+		}
+		
+		.tabContents li.active {
+			display: block;
+		}
+     .tab-menu>li{
+     	width:88px;
+     	height:30px;
+     	background:#bfbfbf;
+     	border-radius:4px;
+     	line-height:30px;
+     	text-align:center;
+    	 border:1px solid #bfbfbf;     	
+    	 display:flex;
+    	 justify-content:center;
+    	 align-items:center;
+     }
+
+    .tab-menu>li p{
+          color:#fff;
+          display:block;
+          margin:0;
+          cursor:pointer;
+          width:100%;
+          height:100%;
+     }
+     
+     .tab-menu>li.on{
+     background:#fff;
+
+     }     
+     .tab-menu>li.on p{
+      	color:#898989;
+
+      }
+    .tabContents{
+   		box-sizing:border-box;
+   		border:1px solid #bfbfbf;
+   		margin-top:3px;
+   		background:#78a4bf14;
+   		
+    }      
+    .tabContents li{
+     box-sizing:border-box;
+    }
+    .tabContents li{
+    	padding:20px;    
+    }
+
+    .ReciPientBox{
+    	width:80%;
+    }
+    
+    .RecSelect{
+    	display:flex;
+    	width:100%;
+    	align-items:center;
+    	margin-top:0 !important;
+    }
+    
+    .RecSelect  .TgSelect{
+    	width:40%;
+    	margin-right:10px;
+    	height:30px !important;
+    }
+    
+    .RecSelect .radiobox-group input,.ReciPientBox .checkbox-group input{
+    	width:fit-content;
+    }
+    
+    .ReciPientBox .checkbox-group{
+    	background:#ffffff;
+    	padding:20px 10px;
+    	box-sizing:border-box;
+    	border:1px solid #ccc;
+    }
+
+    .ReciPientBox .checkbox-group div{
+    	width:50%;
+    	display:flex;
+    	align-items:center;
+    }    
+    .ReciPientTable thead,  .revebTable thead{
+    	background:#7f7f7f;
+    	color:#fff;
+    }
+    
+    .ReciPientTable thead th,  .revebTable  thead th{
+    	text-align:center;
+    	font-size:13px;
+    	
+    }
+     .ReciPientTable tbody td, .revebTable tbody td{
+        	font-size:13px;
+        	padding:2px 5px !important;
+			  text-align: center; /* 수평 가운데 정렬 */
+			  vertical-align: middle; /* 수직 가운데 정렬 */
+        }
+ .revebTable tbody td{
+ 	height:28px;
+ }
+     .ReciPientTable tbody td .td_select{
+     	margin:3px;
+     }
+      .ReciPientTable tbody tr,.revebTable tbody tr{
+          background:#fff;
+     
+     }
+     
+     .modibox-group{
+     	display:flex;
+     	align-items:center;
+     	width:80%;
+     }
+     
+     
+
+    /* button */
+    .typeSelect button{height:100%; width:100px; background:linear-gradient(0deg, #30639f, #6eacf7); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .ID_form button{height:100%; width:100px; background:linear-gradient(0deg, #298ba5, #50c9e9); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .top_btn_box {height:30px; display:flex; justify-content:flex-end;}
+    .top_btn_box button.newReg{height:100%;  background:linear-gradient(0deg, #30639f, #6eacf7); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px;}
+    .top_btn_box button.saveBtn{height:100%;  background:linear-gradient(0deg, #7d9c39, #b2d767); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px; margin-left:5px;}
+    .top_btn_box button.DeleteBtn{height:100%;  background:linear-gradient(0deg, #a02f2c, #ff7a77); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px;   margin-left:5px;}
+    .textAC{height:30px; margin:10px 0;}
+    .storeSearchBtn{background:linear-gradient(0deg, #30639f, #6eacf7); border:unset; border-radius:4px; color:#fff; font-weight:600; width:80px; height:25px;}
+    .StoreNameBtn{ background:linear-gradient(0deg, #298ba5, #50c9e9); border:unset; border-radius:4px; color:#fff; font-weight:600; width:80px; height:30px;}
+    .ClientNameBtn{ background: linear-gradient(0deg, #614483, #bb8ef3); border:unset; border-radius:4px; color:#fff; font-weight:600; width:80px; height:30px;}
+
+      #search_box .btn-primary{
+		  width:100%;
+		  background: linear-gradient(0deg, #614483, #bb8ef3);
+		   border: unset;
+		   border-radius: 4px;
+		   color: #fff;
+		   font-weight: 600;
+		   padding: 0 20px;
+		   height:34px;
+  	}
+  	
+   table tbody td:nth-child(3) {
+     max-width: 200px; /* 원하는 너비로 설정 */
+     white-space: nowrap; /* 텍스트가 한 줄로 유지 */
+     overflow: hidden; /* 넘치는 텍스트 숨기기 */
+     text-overflow: ellipsis; /* 말줄임(...) 표시 */
+    }
+    
+    
+        /* modal */
+        
+		/* 모달 기본 스타일 */
+		
+		.modal {
+		  display: none; /* 기본적으로 모달은 숨김 처리 */
+		  position: fixed;
+		  z-index: 1111; /* 다른 콘텐츠 위에 나타나도록 */
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+		}
+		
+		.modal-header h2{
+			margin:0;
+			font-size:18px;
+			color:#fff;
+			line-height:1.8;
+			width:fit-content;
+		}
+		
+		/* 모달 콘텐츠 스타일 */
+		.modal-content {
+		  background-color: #fff;
+		  border: 1px solid #888;
+		  width: 80%; /* 모달 너비 설정 */
+		  max-width: 800px; /* 최대 너비 */
+		  border-radius: 0px;
+		  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		  top:50%;
+		  left:50%;
+		  transform:translate(-50%, -50%);
+		}
+		
+		#storeNameModal 	.modal-content,#clientNameModal 	.modal-content  {
+		  background-color: #fff;
+		  border: 1px solid #888;
+		  width: 80%; /* 모달 너비 설정 */
+		  max-width: 500px; /* 최대 너비 */
+		  border-radius: 0px;
+		  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		  top:50%;
+		  left:50%;
+		  transform:translate(-50%, -50%);
+		}
+		
+		#storeNameModal .detail-info-form .form-group label,#clientNameModal .detail-info-form .form-group label{
+			width:15%;
+			padding-right:20px;
+		}
+		#templateModal .modal-section{
+			box-sizing:border-box;
+			padding:20px;
+		}		
+		
+		#templateModal table th,#storeNameModal table th,#clientNameModal table th{
+			background:#428bca !important;
+			color:#fff !important;
+		}
+		
+		#templateModal table td{
+			background:#fff !important;
+		}
+		#storeNameModal table td,#clientNameModal table td{
+		background:#f9f9f9;
+		border:1px solid #cce3f5;
+		}
+		#storeNameModal .modal-section,#clientNameModal .modal-section{
+			box-sizing:border-box;
+			padding:20px;
+		}
+		
+		.template_contents{
+			display:flex;
+			justify-content:space-between;
+		}
+		
+
+		.temp_left_sub form{
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			height:100%;
+		}
+		
+		#templateModal .detail-info-form .form-group label{
+			width:30%;
+		}
+		
+		.list-tempmsg{
+			background:#eef2f5;
+			box-sizing:border-box;
+			padding:10px;
+		}
+		/* 모달 닫기 버튼 스타일 */
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		  cursor: pointer;
+		}
+		
+		.close:hover,
+		.close:focus {
+		 
+		  text-decoration: none;
+		}        
+        

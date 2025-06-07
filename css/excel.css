@@ -1,0 +1,36 @@
+
+.file-info {
+    font-size: 14px;
+    color: gray;
+    background-color: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    padding: 50px 40px 20px 40px;
+    height: 180px;
+    border: 2px dashed #a0b5e3;
+    text-align: center;
+    background-color: #cbebfb;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upload-box > ul > li {
+    font-size: 12px;
+}
+
+.upload-box img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+.upload-box p {
+    font-size: 16px;
+    font-weight: bold;
+}
+.upload-box.dragover {
+    background-color: #a7dffb;
+}

@@ -1,0 +1,163 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@font-face {
+font-family: 'notoSans';
+font-style: normal;
+font-weight: normal;
+src: url(/resources/fonts/NotoSans-Regular.ttf);
+}
+@font-face {
+font-family: 'notoSans_semibold';
+font-style: semibold;
+font-weight: 400;
+src:url(/resources/fonts/NotoSans-SemiBold.ttf);
+}
+@font-face {
+font-family: 'notoSans_bold';
+font-style: bold;
+font-weight: 700;
+src:url(/resources/fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+font-family: 'NanumGothic';
+font-style: normal;
+font-weight: normal;
+src:url(/resources/fonts/NanumGothic.ttf);
+}
+@font-face {
+font-family: 'NanumGothic_bold';
+font-style: bold;
+font-weight: 700;
+src:url(/resources/fonts/NanumGothicBold.ttf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 900;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-ExtraBold.otf);
+}
+
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 800;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Bold.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-SemiBold.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 600;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Medium.otf);
+}
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 500;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Regular.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 400;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Light.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 300;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Thin.otf);
+}
+
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 900;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-ExtraBold.otf);
+}
+
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 800;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Bold.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-SemiBold.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 600;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Medium.otf);
+}
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 500;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Regular.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 400;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Light.otf);
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 300;
+	font-display: swap;
+	src: url(/resources/fonts/Pretendard-Thin.otf);
+}
+
+
+@font-face {
+	font-family: 'Nanumsquare';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/fonts/NANUMSQUAREEB.OTF);
+}
+
+@font-face {
+	font-family: 'Nanumsquare';
+	font-weight: 600;
+	font-display: swap;
+	src: url(/resources/fonts/NANUMSQUAREB.OTF);
+}
+
+
+@font-face {
+	font-family: 'Nanumsquare';
+	font-weight: 500;
+	font-display: swap;
+	src: url(/resources/fonts/NANUMSQUARER.OTF);
+}
+
+
+@font-face {
+	font-family: 'Play';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/fonts/PLAY-BOLD.TTF);
+}

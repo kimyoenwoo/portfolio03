@@ -1,0 +1,508 @@
+body{margin:0; padding:0;font-family:"Nanumsquare", Nanumsquare, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important; height:100%;}
+body{position:absolute;width:100%;height:100%; background-size:auto 100%;}
+section.mainCt{height:100%;width:100%;position:relative;min-height:1000px;;}
+p, a, h1, h2, h3, h4, h5, h6, span { transform: skew(-0.1deg); font-family:"Nanumsquare", Nanumsquare, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important; }
+#loginWrap{position:absolute;margin:0;padding:0;width:100%;height:100%; display:flex; flex-direction:column; background-size:cover; background-position:center; }
+.logo{display: block; width:100%;}
+.logo a{font-size:30px; color:#393939; letter-spacing:0; font-weight:700 !important;}
+.logo span{ color:#393939; letter-spacing:0;  font-weight:600 !important;}
+.loginBox{ padding:0; height:100vh; display:flex; justify-content:space-between; align-items:center; position:relative; }
+#alertConsole{padding:10px 0;}
+.loginSlogan{background:url('../images/common/login_slogan.png') no-repeat 0 0;background:transparent; text-align: left;color: #fff; position:absolute; left:3%;  height:600px; display:flex; flex-direction:column; justify-content:flex-end;}
+.loginSlogan span{font-size:22px;color:#203864;}
+.loginSlogan>span{font-weight:600; letter-spacing:-0.5px; color:#30476f;}
+.loginSlogan h1{font-size:50px;margin:14px 0 30px 0; font-weight:bold; color:#1b3461;}
+.loginSlogan h1 > span{ color:#1b346191; font-size:50px;}
+.loginSlogan>p{font-size:20px; line-height:1.2; color:#00266b; font-weight:500; }
+.loginSlogan .contactBox{display:flex; align-items:center; justify-content:space-between; margin-top:30px; text-align:center; width:600px;}
+.loginSlogan .contactBox p{padding:20px 40px;  color:#00266b; font-size:20px; border:1px solid #00266b; margin:0;}
+.loginSlogan .contactBox p.telBox{background:#00266b; color:#fff;}
+.loginBox{
+
+    background-size: contain;
+
+}
+
+.loginBox .imgWrap {
+	width: 60%;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loginBox .imgWrap .loginbg {
+	width: 95%;
+	height: 95%;
+	border-radius: 40px;
+	background: linear-gradient(225deg, #008acd, #0dcbb1, #d788ff);
+	background-size: 200% 200%;
+	transition:all 0.5s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+
+
+
+.loginBox .imgWrap .loginbg img{
+	width:80%;
+	margin: 30px 0;
+}
+
+.loginBox .imgWrap .loginbg .loginbgTxt {
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.2;
+}
+
+.loginBox .imgWrap .loginbg h2.loginTitle:before {
+	content: "\F6FD";
+	font-family: 'bootstrap-icons' !important;
+	font-size: 70px;
+}
+
+.loginBox .imgWrap .loginbg h2.loginTitle {
+	color: #fff;
+	font-size: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+	font-weight: 600;
+	gap:10px;
+	letter-spacing: -1px;
+}
+.loginBox .imgWrap .loginbg h2.loginTitle span{
+	font-weight: 700;
+    background: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    color: #0bc0b6;
+    padding: 10px 80px;
+    border-radius: 40px;
+    letter-spacing: -1px;
+}
+.loginBox .formBox {
+	opacity:0;
+	transition:all 0.5s;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-end;
+	margin: 0;
+	font-size:0.8em;
+	width:40%;
+	height: 100%;
+	background: transparent;
+	box-sizing:border-box;
+	justify-content:center;
+}
+.loginBox .formBox.active{
+	opacity:1;
+}
+
+.loginBox .formBox .formLoginWrap{
+	width: 100%;
+    height: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.loginBox .formBox .topText {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start
+}
+
+.loginBox .formBox .topText>h1 {
+	font-size: 50px;
+	display: flex;
+	gap: 10px;
+	align-items: baseline;
+}
+
+.loginBox .formBox .topText>h1:before {
+	content: "\F8A8";
+	font-family: 'bootstrap-icons' !important; 
+    font-size: 45px;
+}
+
+.loginBox .formBox .topText>p {
+	font-size: 16px;
+    font-weight: 500;
+    color: #0000008f;
+    letter-spacing: -0.5px;
+}
+.loginContents {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 70%;
+    margin: 0 auto;
+}
+
+.loginTabmenu {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	border-bottom:1px solid #00000026;
+}
+
+.loginTabmenu>li{
+	width:50%;
+	text-align:center;
+	line-height:50px;
+
+
+}
+.loginTabmenu>li.active{
+	border-bottom: 2px solid #0abeb6;
+}
+.loginTabmenu li.active a {
+  font-weight: bold;
+  color:#0abeb6;
+}
+.loginTabmenu>li a{
+	font-size:20px;
+	color:#cecece;
+}
+
+button.GPKIon {
+	border: none;
+	outline: none;
+	background: #0abeb6;
+	width: 100%;
+	height: 70px;
+	font-size: 25px;
+	color: #fff;
+	border-radius: 8px;}
+#alertConsole{
+	display:none;
+	font-size : 13px;
+}
+	
+/* 회원가입 팝업 2025-02-17 */
+#joinDiv .info, #joinDiv .infoBox {
+    height: 60%;
+    font-size: 0.8em;
+}
+
+#joinDiv .info .infoBox {
+    width: 100%;
+    box-sizing:border-box;
+    padding:20px;
+}
+
+#joinDiv .btnBox {
+    width: 90%;
+    float: right;
+    height: 54px;
+}
+
+#joinDiv label.checkbox{
+	font-size:15px;
+}
+
+#joinDiv .btnPw-box{
+	width:100%;
+	justify-content: center;
+}
+
+#joinDiv .btnPw-box .joinbtn{
+	padding: 10px 40px;
+    font-size: 15px;
+    background: #4a7ad6;
+    outline: none;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+#joinDiv .info:after {
+    clear: both;
+    content: "";
+    float: none;
+}
+
+#joinDiv .btnPw-box {
+	width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#joinDiv .btnPw-box .btnPw {
+    float: right;
+    display: block;
+    height: 70px;
+    width: 70px;
+    background: url('../images/common/pwdpop_search.svg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    text-indent: -1000px;
+    border-radius: 5px;
+}
+
+#joinDiv .btnFindOrgCd {
+    float: right;
+    display: block;
+    height: 34px;
+    width: 50px;
+    background: #4a7ad6;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: revert;
+}
+
+#joinDiv p {
+    color: #a1a1a1;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+#joinDiv .textBox {
+    padding: 2% 1%;
+    font-size: 15px;
+}
+
+#joinDiv .info .infoBox .control-label {
+	width: 31% !important;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-right: 1%;
+    padding-right: 10px;
+    padding-top:0;
+}
+
+#joinDiv {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin: 0 auto;
+    border: unset;
+    width: 500px;
+    height: fit-content;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+    box-shadow: 2px 2px 6px #33333352;
+}
+#joinDiv label.required:after{
+	content:unset;
+}
+
+#joinDiv label.required:before{
+	content: "*";
+    color: red;
+    font-family: 'bootstrap-icons' !important;
+    width: 5px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    font-size: 17px;
+    right: 5px;
+
+}
+#joinDiv .popHead h2 {
+    float: left;
+    margin: 5px 0 0 0;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold !important;
+}
+
+#joinDiv .popHead {
+    background-color: #4a7ad6;
+    border: none;
+}
+
+.joinUsr {
+    margin: 0 5px;
+}
+
+.joinUsr a {
+    color: #8b8b8b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#joinDiv .col-100 {
+    display: flex;
+    float: unset;
+    position: unset;
+    justify-content: center;
+    align-items: center;
+}
+
+#joinDiv .btnPw-box {
+    display: flex;
+    align-items: center;
+}
+
+#joinDiv .form-inline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.disabled-input {
+    background-color: #eee !important;
+    color: #333;
+}
+
+.disabled-button {
+    background-color: #6d6d6d !important;
+    color: #fff;
+    cursor: not-allowed;
+}
+.loginBox .formBox .formLogobox{width:80%; margin:0 auto; display:flex; justify-content:center; margin-bottom:40px; }
+.loginBox .formBox .formLogobox .logo{font-size:30px; color:#000;}
+.loginBox .formBox .formTxt{height:10%; width:80%; margin:0 auto;}
+.loginBox .formBox .info{}
+.loginBox .formBox .copyright{display:flex; align-items:center; justify-content:center; margin:30px 0;}
+.loginBox .formBox p{text-align:center;}
+.loginBox .formBox p.id_box,.loginBox .formBox p.pwd_box{position:relative;}
+.loginBox .formBox p.id_box input[type=text]{}
+.loginBox .formBox p.pwd_box input[type=password]{}
+.loginBox .formBox p sapn{text-align:center;margin-top:14px;}
+.loginBox .formBox .formLogo{display: block;width:70%;height:100%; background:url('../images/common/bx_form_logo.png')  no-repeat center; background-size:80%; }
+.loginBox .formBox label{width:auto; position:absolute; z-index:1; text-align:right; font-size:14px; height:100%; line-height:50px; padding: 0 15px; color:#000; font-weight:600; }
+.loginBox .formBox input[type=text], .loginBox .formBox input[type=password]{all:initial;box-sizing:border-box; border-radius:5px; height:100% !important; width:-webkit-fill-available; right:0; width:100%; margin:0; padding-right:5%;} 
+.loginBox .formBox input[type="text"]:focus,
+.loginBox .formBox input[type="password"]:focus {border: 1px solid #007bff; /* 파란색 테두리 */outline: none; /* 기본 아웃라인 제거 */ box-shadow: 0 0 5px rgba(0, 123, 255, 0.75); /* 파란색 빛 효과 */ transition: box-shadow 0.3s ease, border-color 0.3s ease; /* 부드러운 효과 */}
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {background-color:#c8c8c8 !important;}
+.loginBox .formBox .formTxt span{font-weight:400; color:#a9a9a9; line-height:1.3; font-size:15px;}
+.loginBox .formBox span{position:relative;height:16px;font-weight:100; }
+.loginBox .formBox span label{text-align:right;}
+.loginBox .formBox span input{margin-top:10px;}
+.loginBox .formBox>div {display:block;}
+.formBox .form-group{ margin-left:0; margin-right:0;}
+.loginBox form{width:100%; display:flex; flex-direction:column; gap:10px; }
+.loginBox form p{ height:50px; margin:0 auto; display:flex; flex-direction:row; justify-content:space-between; align-items:center; border-radius:5px;}
+.loginBox .option{width: 80%; margin: 0 auto; display:flex; align-items:center; flex-direction:column; gap:20px;  justify-content:space-between; }
+.loginBox .cs{padding-top:10px; width: 90%;padding-top: 10px;}
+.info .form-group .form-control{min-height:14px;min-width:14px;}
+
+
+#remember_me_holder{vertical-align: top;height:20px;line-height:18px;width:30%; display:flex; align-items:center;}
+#remember_me_holder input{padding:0;margin:0;height:16px !important;min-height: 16px;width:16px; position:absolute; left:0; border-radius:2px;border:1px solid #ccc;vertical-align: middle;min-width: inherit;}
+#remember_me_holder label{width:100px;height:18px; font-size:15px;font-weight: normal;padding:0; text-align:left;line-height:18px; position:absolute; left:25px; color:#737373; }
+
+.loginBox .formBox #remember_me_holder{position: relative;margin:0 !important;}
+.loginBox .formBox #remember_me_holder #btn-group{display:none;}
+.loginBox .formBox #remember_me_holder span{font-size:11px;}
+/*.loginBox .formBox #remember_me_holder input{width:14px;height:14px;vertical-align: middle;}*/
+.loginBox p.circle{
+	width:50px;
+	height:50px;
+	background:Red;
+}
+.loginBox .select_lang{margin-bottom:0; border:unset;}
+.loginBox .select_lang select{border:unset; color:#000; font-weight:500; box-sizing:border-box; padding:5px 10px; font-size:15px; margin-right:70px; display:none; }
+.loginBox .select_lang select:focus{outline:0;}
+.loginBox .btnBoxWrap{margin:20px 0;}
+.loginBox .btnBox{width:100%;height:20%; margin-top:10px;}
+.loginBox .btnBox input[type=submit]{background-color:#09b8b9 !important; width:90%;font-size:20px;background:linear-gradient(225deg,  #008acd, #0dcbb1);border-radius:50px;font-weight:500;box-shadow:2px 2px 5px #00000030;  line-height:50px;border:none;color:#ffffff;}
+.loginBox .btnBox .btn-success{background-color:#0096ff; border:none; width:400px; font-size:20px; font-weight:500; line-height:50px; border-radius:5px;}
+.loginBox .btnBox .btn-join{background-color:#fff; border-color:#0096ff; width:400px; font-size:20px; font-weight:500; line-height:50px; border-radius:5px; color:#0096ff; display:none;}
+.loginBox .btnBox .btn-success:focus{color:#fff; outline:0;}
+.loginBox .btnBox .btn-join:focus{color:#0096ff;outline:0;}
+#pwDiv .info,#idDiv .info{height:60%;font-size:0.8em;}
+#pwDiv .info .infoBox,#idDiv .info .infoBox{width:80%;}
+#pwDiv .btnBox,#idDiv .btnBox{width:90%;float: right;height:54px;}
+#pwDiv .info:after,#idDiv .info:after{clear:both;contnet:"";float:none;}
+#pwDiv .btnPw-box,#idDiv .btnPw-box{height:100%; width:20%;}
+.btnPw-box .btnPw{float:right;display:block;height:70px; width:70px;background:url('../images/common/pwdpop_search.svg') no-repeat; background-position:center; background-size:cover; border:none;text-indent: -1000px; border-radius:5px;}
+#pwDiv p,#idDiv p{color:#a1a1a1; font-weight:500; font-size:16px; text-align:center;}
+#pwDiv .textBox,#idDiv .textBox{padding:2% 1%; font-size:15px;}
+#pwDiv .info .infoBox .control-label,#idDiv .info .infoBox .control-label{width:20% !important; font-size:15px; margin-bottom:0; margin-right:1%;}
+
+#pwDiv,#idDiv { transform: translate(-50%, -50%);  top: 50%; left:50%;  position: fixed;margin: 0 auto;border: unset; width: 500px;height: 300px;background: #fff;border-radius: 4px;z-index: 1000;display: none;box-shadow: 2px 2px 6px #33333352;}
+#pwDiv  .popHead h2,#idDiv  .popHead h2{float:left;margin:5px 0 0 0;padding:0;color:#fff;font-size:18px;font-weight: bold ! important;}
+#pwDiv .popHead,#idDiv .popHead{background-color:#4a7ad6; border:none;}
+#pwDiv .popHead .popClose,#idDiv .popHead .popClose{background:url(../images/common/pwdpop_close.svg) no-repeat 50% 50%;}
+.pwSearch,.idSearch,.joinUsr{margin:0 5px;}
+.pwSearch a,.idSearch a,.joinUsr a{color:#8b8b8b; font-size:14px; font-weight:500;}
+
+.loginBox .footer{display:inline-block;border-top:2px solid #ccc;border-bottom-left-radius:3px;border-bottom-right-radius:3px;width:340px;height:76px;margin:0px;background-color:#fff;
+		-moz-box-shadow: 0px  2px  5px  #ccc;
+		-webkit-box-shadow: 0px  2px  5px  #ccc;
+		box-shadow: 0px  2px  5px  #ccc;
+}
+#pwDiv .col-100,#idDiv .col-100{display:flex; float:unset; position:unset; justify-content:center; align-items:center;}
+#pwDiv .btnPw-box,#idDiv .btnPw-box{display:flex; align-items:center;}
+#pwDiv .form-inline,#idDiv .form-inline{display:flex; align-items:center; width:100%; height:100%;}
+.footer{width:70%;display:inline-block;float:left;margin-left:30px;margin-top:20px;font-size:0.8em;}
+
+/*.footer .search a:last-child{margin-left:20px;padding-right:24px;text-decoration: none;background:url('../images/common/iconArrow.png') no-repeat right 0 ;color:#666;}*/
+.footer .cs{display:inline-block;float:left;width:45%;padding-left:120px;background:url('../images/common/loginAMS.png') no-repeat 0 10px;height: 60px;padding-top:10px;}
+.footer .tel, .footer .fax{ width:100%;height:12px;display:inline-block;}
+.footer .number{ width:100%;height:12px;display:inline-block;margin-bottom:4px;text-align:left}
+.footer .tel:after{clear:both;}
+.footer .tel > dt, .footer .fax > dt{display:inline-block;float:left;width:40px;}
+#loginWrap .footer .tel > dd, .footer .fax > dd{display:inline-block;float:left;width:100px;margin-left:0;}
+.copyright{text-align:center;font-size:13px;color:#666; width: 100%;}
+
+
+/*popupN--------------------------------------------------------------------------------------------------------------------------------*/
+
+#popupN{position: absolute;width:440px;background:#f7f7f7;top:20px;left:20px;border: 1px solid #999;border-top:4px solid #8d2c63;box-shadow: 0px 2px 5px #ccc;display:block;}
+#popupN .header{height:40px;background:#cc3366;line-height:36px; color:#fff;padding:0 10px;font-size:18px;width:100%;font-weight:bold;}
+#popupN1 .header .popupClose1{display:none;}
+
+#popupN .body{background:#f7f7f7;text-align:left;width:100%;}
+#popupN .body .notice{background:url('../images/common/popupN.png') no-repeat 0 0;height:196px;margin:20px 20px 0;}
+#popupN .body p.bizcareGo{padding:0 20px;}
+#popupN .body .bizcareOld{display:block;margin: 0 auto;width:350px;height:30px;background:url('../images/common/bizcare1Go.png') no-repeat 0 0;}
+#popupN .body .info{border: 1px solid #ccc;;margin:10px 20px;border-radius:4px;padding:20px;background:#fff;font-size:12px;line-height:20px;}
+#popupN .body .info span{color:#1b3855;display:block;font-weight:bold;}
+#popupN .footer{background-color:#1b3855;height:40px;line-height:36px;color:#fff;padding:0 20px;width:100%;margin:0;text-align:left;}
+#popupN .footer  input{vertical-align: middle;margin: 0;}
+#popupN .footer .today{margin-left:10px ;color:#fff;width:90%}
+#popupN .footer .popupClose{float:right;text-align:right;font-size:11px;color:#fff;text-shadow:none;display:block;width:40px;}
+
+#popupN1{position: absolute;width:450px;background:#f7f7f7;top:20px;right:40px;border: 1px solid #999;border-top:4px solid #8d2c63;box-shadow: 0px 2px 5px #ccc;display:block;  padding-bottom: 20px;}
+#popupN1 .header{height:40px;background:#cc3366;line-height:36px; color:#fff;text-align:center;font-size:16px;width:100%;font-weight:bold;}
+#popupN1 .body{background:#f7f7f7;text-align:left;width:100%;height: 340px;overflow-y: auto;}
+#popupN1 .body .notice{background:url('../images/common/popupN.png') no-repeat 0 0;height:196px;margin:20px 20px 0;}
+#popupN1 .body p.bizcareGo{padding:0 20px;}
+#popupN1 .body .bizcareOld{display:block;margin: 0 auto;width:350px;height:30px;background:url('../images/common/bizcare1Go.png') no-repeat 0 0;}
+#popupN1 .body .info{border: 1px solid #ccc;;margin:10px 15px;border-radius:4px;padding:20px;background:#fff;font-size:12px;line-height:20px;}
+#popupN1 .body .info b.subtitle{margin:1% 30%; }
+#popupN1 .body .info b.title{margin:1% 10%; font-size:20px;color:#BE134C;}
+#popupN1 .body h4{color:#BE134C;font-size:14px;border-bottom:1px dotted #ccc;}
+	
+#popupN1 .body .info span{color:#1b3855;display:block;font-weight:bold;}
+#popupN1 .footer{background-color:#1b3855;height:40px;line-height:36px;color:#fff;padding:0 20px;width:100%;margin:0;text-align:left;}
+#popupN1 .footer  input{vertical-align: middle;margin: 0;}
+#popupN1 .footer .today{margin-left:10px ;color:#fff;width:90%}
+#popupN1 .footer .popupClose1{float:right;text-align:right;font-size:11px;color:#fff;text-shadow:none;display:block;width:40px;}
+
+
+
+/*Coming Soon--------------------------------------------------------------------------------------------------------------------------------*/
+#comingSoon{margin:0;padding:0;background:url('../images/common/cloud.png') repeat-x 50% 0;padding-top:250px;width:100%;}
+
+div.coming{background:url('resource:/images/common/comingSoon.png') no-repeat 0 50%;width:640px;height:358px;margin:0 auto;text-align:right;padding-top:256px;}
+span.soon{position: relative;font-size:12px;color:#cc3366;font-weight:bold;}
+
+
+

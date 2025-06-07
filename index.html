@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <title>스마트교육 자산관리 솔루션</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/excel.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Tabulator CSS -->
+    <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator.min.css" rel="stylesheet">
+    
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Tabulator JS -->
+    <script src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
+    <script src="js/util/common.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/dashboard.js"></script>
+</head>
+<body class="main">
+    <div id="wrapper">
+        <!-- 헤더 영역 -->
+        <header id="headerWrap" class="main">
+            <div class="header">
+                <div class="userBox">
+                    <div class="userWrap">
+                        <ul class="gnb_comm" style="display: none;">
+                            <li style="display: none;"><a href="../customer/qna.html">LOGIN</a></li>
+                            <li class="logout_btn"><a href="#" class="logout">로그아웃</a></li>
+                            <li class="userinfo_btn"><a href="javascript:void(0)" onclick="javascript:clickSectionMnu('/view1/userInfo')" style="display: none;"></a></li>
+                        </ul>
+                        <div class="user_top">
+                            <div class="logo"></div>
+                            <span class="logoTxt">스마트교육 자산관리 솔루션</span>
+                        </div>
+                        <div class="user_bottom">
+                            <div class="accessInfo">
+                                <strong class="org_name">[<span>교육청/학교명</span>]</strong>
+                                <strong class="user_name">사용자명님</strong>
+                            </div>
+                            <div class="navHidden">
+                                <button class="HiddenBtn"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_top">
+                    <div class="gnb_menu">
+                        <ul class="menu">
+                            <li class="active"><a href="#">Dashboard</a></li>
+                            <li class=""><a href="#">자산정보</a></li>
+                            <li class=""><a href="#">사업관리</a></li>
+                            <li class=""><a href="#">자산신청</a></li>
+                        </ul>
+                    </div>
+                    <div class="userDirect">
+                        <div class="userEdit">
+                            <a href="#" class="userEditBtn" data-url="B_M_UMLM">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </div>
+                        <div class="userLogout">
+                            <a href="#">
+                                <i class="bi bi-box-arrow-right"></i>로그아웃
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 네비게이션 영역 -->
+        <nav id="topmenu">
+            <div class="gnbWrap" id="nav">
+                <div class="gnbContent">
+                    <div class="group_wrap">
+                        <div class="group_regis">
+                            <div class="nav-grid-wrap">
+                                <div id="tree-table" style="height:100%;"></div>
+                                <div id="deptCdMap"></div>
+                            </div>
+                            <ul class="as_mng">
+                                <li class="asset_list">
+                                    <p class="mng_title">스마트자산&nbsp;&nbsp;(대)</p>
+                                    <span id="smtCnt" class="green" style="float: right;">0</span>
+                                </li>
+                                <li class="as_list">
+                                    <p class="mng_title">AS&nbsp;진행&nbsp;&nbsp;(건)</p>
+                                    <span id="asrvCnt" class="red" style="float: right;">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gnbBot">
+                    <p class="foldBtn" id="toggleButton">
+                        <i class="bi bi-chevron-down"></i>
+                    </p>
+                    <div class="as_wrap"></div>
+                    <div class="service_wrap">
+                        <h1 class="gnb_title">Services 바로가기</h1>
+                        <div class="quick_menu">
+                            <div class="quick_wrap">
+                                <div class="menu_item" data-url="B_M_AMSMAM">
+                                    <div class="icon" style="margin-bottom: -3px">
+                                        <i class="bi bi-person-badge"></i>
+                                    </div>
+                                    <span>자산정보</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_ASRV">
+                                    <div class="icon">
+                                        <i class="bi bi-tools"></i>
+                                    </div>
+                                    <span>온라인<br>A/S접수</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_AMSMLS">
+                                    <div class="icon" style="margin-bottom: -3px">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                    </div>
+                                    <span>분실/폐기</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_ASSC">
+                                    <div class="icon">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <span>서비스센터<br>찾기</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_APPC">
+                                    <div class="icon">
+                                        <i class="bi bi-share"></i>
+                                    </div>
+                                    <span>자산중계<br>신청</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_TRTRTT">
+                                    <div class="icon">
+                                        <i class="bi bi-cart4"></i>
+                                    </div>
+                                    <span>연수/대여<br>신청</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_ISNT">
+                                    <div class="icon">
+                                        <i class="bi bi-megaphone"></i>
+                                    </div>
+                                    <span>공지사항</span>
+                                </div>
+                                <div class="menu_item" data-url="B_M_ISEU">
+                                    <div class="icon">
+                                        <i class="bi bi-question-circle"></i>
+                                    </div>
+                                    <span>쉬운해결</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 대시보드 컨텐츠 영역 -->
+        <div id="wrapCon">
+            <div class="dashboard">
+                <div class="dashboard_top_wrap">
+                    <div class="dashtop_left">
+                        <div class="dashTabMenu">
+                            <ul class="dashTab">
+                                <li class="active" data-target="assetDashboard">
+                                    <button class="butn">자산현황</button>
+                                </li>
+                                <li data-target="asDashboard">
+                                    <button class="butn">AS현황</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filterWrap">
+                            <div class="filterToggleWrap customFilterRow">
+                                <span id="toggleStdYmd" class="filterToggle">기준일 </span>
+                                <input class="customFilterRow" type="date" id="selectedStdYmd" />
+                                <button id="btnApplyDate" class="applyBtn">적용</button>
+                                <span id="selectedFilter" class="selectedFilter" style="display: none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 자산현황 대시보드 -->
+                <div class="dashboardSection assetDashboard active">
+                    <div class="dashBox">
+                        <!-- 학교 현황 -->
+                        <div class="dashContents">
+                            <!-- dashboard_IS_line1.jsp: 스마트기기 보유 현황 + 사업현황 -->
+                            <div class="dash_row top_row" id="is_line1Container" style="height: 30vh;">
+                                <div class="dash_content left" style="position: relative;">
+                                    <div class="left_top">
+                                        <h2 class="left_top_title">스마트기기 보유 현황</h2>
+                                        <button id="btnReaggregate1" class="butn btn-bgblue" style="position:absolute; top:10px; right:10px;">재집계</button>
+                                    </div>
+                                    <div class="left_content">
+                                    <!--학교 현황 : 지원청, 특수/기타, 초/중/고-->
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="chart-container">
+                                                    <canvas id="schoolCntBarChart"></canvas>
+                                                </div>
+                                                <div class="chart_infor">
+                                                    <div class="chart_contents">
+                                                        <ul class="chart_infor_list list-1" style="gap:10px">
+                                                        <!-- ['#000', '#fbbf24', '#f97316','#10b981','#3b82f6','#facc15'] -->
+                                                            <li style="width: 25%"><a href="#">
+                                                                <div class="cht_nm_box">
+                                                                    <p class="cht_nm_title" style="">교육청</p>
+                                                                    <span class="cht_nm_txt" id="eduCnt"> 0 </span>
+                                                                </div>
+                                                            </a></li>
+                                                            <li style="width: 25%" >
+                                                                <a href="#">
+                                                                    <div class="cht_nm_box">
+                                                                        <p class="cht_nm_title">교육지원청</p>
+                                                                        <span class="cht_nm_txt" id="doeCnt"> 0 </span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li style="width: 25%"><a href="#">
+                                                                <div class="cht_nm_box">
+                                                                    <p class="cht_nm_title">초등학교</p>
+                                                                    <span class="cht_nm_txt" id="eleCnt"> 0 </span>
+                                                                </div>
+                                                            </a></li>
+                                                            <li style="width: 25%"><a href="#"> 
+                                                                <div class="cht_nm_box">
+                                                                    <p class="cht_nm_title">중학교</p>
+                                                                    <span class="cht_nm_txt"  id="midCnt"> 0 </span>
+                                                                </div>
+                                                            </a></li>
+                                                            <li style="width: 25%"><a href="#">
+                                                                <div class="cht_nm_box">  
+                                                                    <p class="cht_nm_title">고등학교</p>
+                                                                    <span class="cht_nm_txt"  id="highCnt"> 0 </span>
+                                                                </div>
+                                                            </a></li>
+                                                            <li style="width: 25%"><a href="#">
+                                                                <div class="cht_nm_box">
+                                                                    <p class="cht_nm_title" style="">특수/기타</p>
+                                                                    <span class="cht_nm_txt" id="spcCnt"> 0 </span>
+                                                                </div>
+                                                            </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--사업현황 : 사업 전체 목록 그리드-->
+                                <div class="dash_content left" style="position: relative;">
+                                    <div class="left_top">
+                                        <h2 class="left_top_title">사업현황</h2>
+                                    </div>
+                                    <div class="left_content">
+                                        <!-- Swiper 슬라이드 -->
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div id="evtDash" class="gridSample tabulator" style="height: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- dashboard_IS_line_2.jsp: 사업별 자산 현황(진행중) -->
+                            <div class="dash_row top_row" style="height:32vh; display: none;">
+                                <div class="dash_content right" style="width: 100%">
+                                    <div class="right_top" style="display: flex; justify-content: space-between; align-items: center;">
+                                        <h2 class="right_top_title">사업별 자산 현황(진행중)</h2>
+                                        <button id="btnReaggregate2" class="butn btn-bgblue">재집계</button>
+                                    </div>
+                                    <div class="right_content">
+                                        <div class="right_cht">
+                                            <div class="right_cht_content">
+                                                <canvas id="curEvtBarChart" style="height:100%;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- dashboard_IS_line_4.jsp: 자산 변동 현황 + 보유자산리스트 -->
+                            <div class="dash_row bottom_row">
+                                <div class="dash_content left">
+                                    <div class="left_top">
+                                        <h2 class="left_top_title">자산 변동 현황</h2>
+                                    </div>
+                                    <div class="left_content">
+                                        <div class="asset_status">
+                                            <ul class="asset_tab_menu">
+                                                <li class="active" data-target="asset-table">자산추가/반납</li>
+                                                <li data-target="asset-table2">중계요청</li>
+                                                <li data-target="asset-table3">중계승인</li>
+                                            </ul>
+                                            <ul class="asset_tab_contents">
+                                                <li class="active">
+                                                    <div id="asset-table" class="gridSample"></div>
+                                                </li>
+                                                <li>
+                                                    <div id="asset-table2" class="gridSample"></div>
+                                                </li>
+                                                <li>
+                                                    <div id="asset-table3" class="gridSample"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash_content right" style="height:100%;">
+                                    <div class="left_top">
+                                        <div class="left_top_title">
+                                            <h2 id="assetTitle" style="margin: 0; font-size: 18px; font-weight: 800;">[서울특별시교육청] 보유자산리스트</h2>
+                                        </div>
+                                        <div class="search_wrap" style="width: 50%;">
+                                            <i class="fi fi-br-search"></i> <input type="text" id="searchBox" placeholder="단말일련번호를 입력해 주세요.">
+                                        </div>
+                                    </div>
+                                    <div class="left_content" style="">
+                                        <div class="myAsset">
+                                            <div class="tab-wrapper">
+                                                <button class="tab-prev" disabled="">
+                                                    <i class="bi bi-caret-left-fill"></i>
+                                                </button>
+                                                <ul class="myAsset_list_menu" id="mdlGrpList">
+                                                    <li class="active">
+                                                        <a href="#">
+                                                            <div class="AssetCircle">
+                                                            <i class="bi bi-display"></i>
+                                                            </div>
+                                                            <p class="myAsset_title">모니터</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#">
+                                                            <div class="AssetCircle">
+                                                            <i class="bi bi-phone"></i>
+                                                            </div>
+                                                            <p class="myAsset_title">스마트폰</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <button class="tab-next">
+                                                    <i class="bi bi-caret-right-fill"></i>
+                                                </button>
+                                            </div>
+                                            <ul class="myAsset_list_contents">
+                                                <li class="active">
+                                                    <div id="myProdList" class="gridSample" style="height: 100%;"></div>
+                                                </li>
+                                                <li>
+                                                    <div id="myPhoneList" class="gridSample" style="height: 100%;"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <!-- AS 현황 대시보드 -->
+                <div class="dashboardSection asDashboard" style="display: none;">
+                    <div class="dashBox">
+                        <div class="dashContents">
+                            <!-- AS 요청 현황 -->
+                            <div class="dash_row top_row" style="height: 25vh;">
+                                <div class="dash_content right" style="width: 100%; position: relative; display:flex; box-sizing:border-box;">
+                                    <p class="dash_progress"></p>
+                                    <!--AS요청 -->
+                                    <div class="dash_content ASreq" style="position: relative;">
+                                        <div class="AS_content">
+                                            <div class="ASnm">
+                                                <h2>총 AS 요청</h2>
+                                                <div class="asCount">
+                                                    <span id="totalAsCnt"> 33,024 </span> 건
+                                                </div>
+                                                <div class="acumCount">
+                                                    ( 누적: <span id="acumAsCnt"> 123 </span> 건 )
+                                                </div>
+                                                <p class="as_circle"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--AS진행 -->
+                                    <div class="dash_content ASprg" style="position: relative;">
+                                        <div class="AS_content">
+                                            <div class="ASnm">
+                                                <h2>총 AS 진행</h2>
+                                                <div class="asCount">
+                                                    <span id="progressAsCnt"> 187 </span> 건
+                                                </div>
+                                                <div class="acumCount">
+                                                    ( 누적: <span id="acumAsCnt2"> 43 </span> 건 )
+                                                </div>
+                                                <p class="as_circle"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--AS완료 -->
+                                    <div class="dash_content AScomp" style="position: relative;">
+                                        <div class="AS_content">
+                                            <div class="ASnm">
+                                                <h2>총 AS 완료</h2>
+                                                <div class="asCount">
+                                                    <span id="successAsCnt"> 158 </span> 건
+                                                </div>
+                                                <div class="acumCount">
+                                                    ( 누적: <span id="acumAsCnt3"> 80 </span> 건 )
+                                                </div>
+                                                <p class="as_circle"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 평균 AS 처리 일 -->
+                            <div class="dash_row top_row" style="height:15vh;">
+                                <div class="dash_content left AScard_1" style="position: relative;">
+                                    <div class="AScard_content">
+                                        <div class="ASTitle">
+                                            <div class="ASicon">
+                                                <i class="bi bi-clipboard-data"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ASnm">
+                                            <h2>평균 AS처리 일</h2>
+                                            <div class="asCount">
+                                                <span id="avgProcessDays">4</span> 일
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dash_content left AScard_2" style="position: relative;">
+                                    <div class="AScard_content">
+                                        <div class="ASTitle">
+                                            <div class="ASicon">
+                                                <i class="bi bi-gear"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ASnm">
+                                            <h2>AS 미처리건 (D+5↑)</h2>
+                                            <div class="asCount">
+                                                <span id="unprocessedAsCnt">21</span> 건
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dash_content left AScard_3" style="position: relative;">
+                                    <div class="AScard_content">
+                                        <div class="ASTitle">
+                                            <div class="ASicon">
+                                                <i class="bi bi-clipboard-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ASnm">
+                                            <h2>장기 미처리건 (D+10↑)</h2>
+                                            <div class="asCount">
+                                                <span id="longUnprocessedAsCnt">0</span> 건
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 년 AS 진행현황 -->
+                            <div class="dash_row top_row" style="height: 35vh">
+                                <div class="dash_content right" style="width: 100%">
+                                    <div class="right_top">
+                                        <h2 class="right_top_title yearReqField">AS 진행현황</h2> 
+                                    </div>
+                                    <div class="right_content">
+                                        <div class="right_cht">
+                                            <div class="right_cht_content">
+                                                <canvas id="asChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 -->
+    <div class="modal" id="myPageModal" tabindex="-1" data-toggle="modal">
+        <div class="modal-dialog"></div>
+    </div>
+    <div class="modal" id="stogSearchCommonModal" data-bs-backdrop="static" tabindex="-1" data-toggle="modal" style="z-index: 1060;">
+        <div class="modal-dialog"></div>
+    </div>
+    <div class="modal" id="noticeModal">
+        <div class="modal-dialog"></div>
+    </div>
+    <div class="modal" id="asstDashBoardModal">
+        <div class="modal-dialog"></div>
+    </div>
+
+</body>
+</html> 

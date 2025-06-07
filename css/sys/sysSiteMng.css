@@ -1,0 +1,131 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+.clearfix:after{content: "";display: block; clear: both;}
+.form-group{margin:0;}
+/*SearchBox*/
+
+#search_box .search-container form{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+#search_box .search-container form>div.site_box,#search_box .search-container form>div.search_box{
+	display:flex;
+	 align-items:center;
+ }
+
+ #search_box .search_input input{
+ width:500px !important;
+ height:35px !important;
+ margin:0;
+ }
+ 
+  #search_box .search_box{}
+ 
+  #search_box .form_group{
+  	display:flex;
+  	align-items:center;
+  }
+
+  
+  #search_box label{padding:0 20px; margin:0;}
+  #search_box .form-control{width:500px;}
+  #search_box  .input-group-btn{width:80px;}
+  #search_box .btn-primary{
+  width:100%;
+  background: linear-gradient(0deg, #614483, #bb8ef3);
+   border: unset;
+   border-radius: 4px;
+   color: #fff;
+   font-weight: 600;
+   padding: 0 20px;
+   height:34px;
+  }
+.list_name{font-size:16px; font-weight:500;}
+  #list-site{ padding-right:20px;}
+  #list-site-sub{width:35%; border-left:1px dashed #d9d9d9; padding-left:20px;}
+  #list-site .textAR{margin-top:10px; display:flex; flex-direction:Row; justify-content:flex-end; align-items:center;}
+  #list-site .site_box{height:fit-content;}
+  .site_contents{display:flex; flex-direction:row; justify-content:flex-start; padding-bottom:20px;}
+  #list-site{width:60%;}
+  
+  .detail-info-form .form-group{display:flex; align-items:center; margin:0; padding:3px 0; height:fit-content;}
+    .detail-info-form .form-group input{height:fit-content !important; padding:3px 2px;}
+    .detail-info-form .form-group label{width:100px; text-align:right; box-sizing:border-box; padding-right:10px; margin:0;}
+    .checkbox-group{width:100%; display:flex; align-items:center;}
+    .checkbox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center;}
+    .checkbox-group input{margin:0 !important; margin-right:4px !important;}
+    .radiobox-group{width:100%; display:flex; align-items:center;}
+   .radiobox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center; }
+input[type='file'] {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.form__input--file_wrap {
+  display: flex;
+  flex-direction:row-reverse;
+  width:82.2%;
+  align-items:center;
+  padding:3px 2px;
+}
+
+.form__input--file_wrap span{
+	background:#fff;
+	border:1px solid #cccccc;
+}
+
+.form__input--file_wrap label{
+	padding:0 !important;
+	font-size:12px;
+	background:linear-gradient(0deg, #2a8ea9, #55c5e3);
+}
+.form__label--file {
+  width: 80px;
+  height: 30px;
+  line-height:30px;
+  background: #999;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.form__span--file {
+  padding: 0 5px 0 10px;
+  display: block;
+  width: 500px;
+  min-height: 30px;
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  line-height: 30px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.footer_infor textarea{
+	width:100%;
+
+}
+
+.detail-info-form .form-group input.radioBtn{margin:0 !important; margin-right:4px !important; }
+    /* button */
+    .storeCode button{height:100%; width:100px; background:linear-gradient(0deg, #a02f2c, #fb6b67); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .ID_form button{height:100%; width:100px; background:linear-gradient(0deg, #298ba5, #50c9e9); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .top_btn_box {height:30px; display:flex; justify-content:flex-end; margin:10px 0;}
+    .top_btn_box button.newReg{height:100%;  background:linear-gradient(0deg, #30639f, #6eacf7); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px;}
+    .top_btn_box button.saveBtn{height:100%;  background:linear-gradient(0deg, #7d9c39, #b2d767); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px; margin-left:10px;}
+    .textAC{height:30px; margin:10px 0;}
+    input.form__input--file{display:contents !important;}
+  #search_box button.btn-primary{
+
+    }

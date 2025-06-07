@@ -1,0 +1,78 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+.clearfix:after{content: "";display: block; clear: both;}
+.form-group{margin:0;}
+/*SearchBox*/
+
+#search_box .search-container form{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+#search_box .search-container .input-group-btn{
+	width:80px;
+}
+
+#search_box .search-container form>div.site_box,#search_box .search-container form>div.search_box{
+	display:flex;
+	 align-items:center;
+ }
+
+ #search_box .search_input input{
+ width:500px !important;
+ height:35px !important;
+ margin:0;
+ }
+ 
+  #search_box .search_box{margin-left:20px;}
+ 
+  #search_box .form_group{
+  	display:flex;
+  	align-items:center;
+  }
+  #search_box .search_box{margin-left:20px;}
+  
+  #search_box label{padding:0 20px; margin:0;}
+.list_name{font-size:16px; font-weight:500;}
+  #list-user .member_box{}
+   #list-user{width:60% !important;}
+  #list-user-sub{width:35% !important; padding-left:20px}
+  #list-user .textAR, #list-user2 .textAR{margin-top:10px; display:flex; flex-direction:Row; justify-content:flex-end; align-items:center;}
+  #list-user .user_box{height:fit-content;}
+  .user_contents,.user_pay_contents{display:flex; flex-direction:row; justify-content:flex-start; padding-bottom:10px;}
+  #list-user{width:60%;}
+  
+  .detail-info-form .form-group{display:flex; align-items:center; margin:0; margin:10px 0; height:30px;}
+    .detail-info-form .form-group input{height:100% !important;}
+    .detail-info-form .form-group label{width:100px; text-align:right; box-sizing:border-box; padding-right:10px; margin:0;}
+    .checkbox-group{width:100%; display:flex; align-items:center;}
+    .checkbox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center;}
+    .checkbox-group input{margin:0 !important; margin-right:4px !important;}
+    .radiobox-group{width:100%; display:flex; align-items:center;}
+   .radiobox-group label{text-align:left !important; width:auto !important ; padding:0; display:flex; align-items:center;}
+    .radiobox-group input{margin:0 !important; margin-right:4px !important;}
+ 	#list-user2{width:100%;}
+ 	.user_pay_wrap{display:flex; justify-content:flex-start;}
+ 	.user_pay_box{height:fit-content;}
+    .user_pay_list{width:60%;}
+    .detail_box{width:35%; margin-left:30px;}
+    /* button */
+    .storeCode button{height:100%; width:100px; background:linear-gradient(0deg, #a02f2c, #fb6b67); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .ID_form button{height:100%; width:100px; background:linear-gradient(0deg, #298ba5, #50c9e9); border:unset; border-radius:4px; color:#fff; font-weight:600;}
+    .top_btn_box {height:30px; display:flex; justify-content:flex-end; margin:10px 0;}
+    .top_btn_box button.newReg{height:100%;  background:linear-gradient(0deg, #30639f, #6eacf7); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px;}
+    .top_btn_box button.saveBtn{height:100%;  background:linear-gradient(0deg, #7d9c39, #b2d767); border:unset; border-radius:4px; color:#fff; font-weight:600; padding:0 20px; margin-left:10px;}
+    .textAC{height:30px; margin:10px 0;}
+      #search_box .btn-primary{
+		  width:100%;
+		  background: linear-gradient(0deg, #614483, #bb8ef3);
+		   border: unset;
+		   border-radius: 4px;
+		   color: #fff;
+		   font-weight: 600;
+		   padding: 0 20px;
+		   height:34px;
+  	}
