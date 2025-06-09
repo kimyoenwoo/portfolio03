@@ -1,5 +1,5 @@
-body, nav, ul, li, a  {margin: 0; padding: 0; font-family: 'Pretendard Variable' !important; font-weight:700;}
- p,a, h1,h2,h3, h4,h5, h6, span { font-family: 'Pretendard Variable' !important; font-weight:600;}
+body, nav, ul, li, a  {margin: 0; padding: 0; font-family: 'Pretendard' !important; font-weight:700;}
+ p,a, h1,h2,h3, h4,h5, h6, span { font-family: 'Pretendard' !important; font-weight:600;}
 a {text-decoration: none;}
 nav#topmenu {position:absolute;top:0;min-width:280px;
 z-index:1040;
@@ -475,7 +475,7 @@ ul.sub_group>li{
     font-weight:700;
     text-align: center;
     line-height:1.2;
-    font-family: 'Pretendard Variable' !important;
+    font-family: 'Pretendard' !important;
 }
 
 
